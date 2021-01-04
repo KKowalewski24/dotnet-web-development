@@ -8,8 +8,10 @@ namespace CuboApi {
 
     public class Startup {
 
+        /*------------------------ FIELDS REGION ------------------------*/
         public IConfiguration Configuration { get; }
 
+        /*------------------------ METHODS REGION ------------------------*/
         public Startup(IConfiguration configuration) {
             Configuration = configuration;
         }
