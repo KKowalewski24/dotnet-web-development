@@ -13,14 +13,13 @@ namespace CuboCore.Domain {
 
         public string Name { get; private set; }
         public DateTime CreatedAt { get; private set; }
-        public IEnumerable<Item> Items { get; private set; }
 
         /*------------------------ METHODS REGION ------------------------*/
         protected Bucket() {
         }
 
         public Item GetItem(string key) {
-            Item item = Items.SingleOrDefault((it) => it.Key == key.ToLowerInvariant());
+            Item item = _items.SingleOrDefault((it) => it.Key == key.ToLowerInvariant());
             if (item == null) {
                 throw new ItemNotFoundException($"Item: {key}, Bucket: {Name}");
             }
@@ -29,7 +28,7 @@ namespace CuboCore.Domain {
         }
 
         public void AddItem(string key, string value) {
-            if (Items.Any((it) => it.Key == key.ToLowerInvariant())) {
+            if (_items.Any((it) => it.Key == key.ToLowerInvariant())) {
                 throw new ItemAlreadyExistsException($"Item: {key}, Bucket: {Name}");
             }
 
@@ -40,11 +39,42 @@ namespace CuboCore.Domain {
             _items.Remove(GetItem(key));
         }
 
+        protected bool Equals(Bucket other) {
+            return base.Equals(other) && Equals(_items, other._items) && Name == other.Name &&
+                   CreatedAt.Equals(other.CreatedAt);
+        }
+
+        public override bool Equals(object obj) {
+            if (ReferenceEquals(null, obj)) {
+                return false;
+            }
+
+            if (ReferenceEquals(this, obj)) {
+                return true;
+            }
+
+            if (obj.GetType() != this.GetType()) {
+                return false;
+            }
+
+            return Equals((Bucket)obj);
+        }
+
+        public override int GetHashCode() {
+            unchecked {
+                int hashCode = base.GetHashCode();
+                hashCode = (hashCode * 397) ^ (_items != null ? _items.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (Name != null ? Name.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ CreatedAt.GetHashCode();
+                return hashCode;
+            }
+        }
+
         public override string ToString() {
             return $"{base.ToString()}, " +
                    $"{nameof(Name)}: {Name}, " +
                    $"{nameof(CreatedAt)}: {CreatedAt}, " +
-                   $"{nameof(Items)}: {Items}";
+                   $"{nameof(_items)}: {_items}";
         }
 
     }
