@@ -8,6 +8,7 @@ namespace CuboCore.Domain {
     public class Bucket : BaseEntity {
 
         /*------------------------ FIELDS REGION ------------------------*/
+        // TODO Check if _items and Items work as expected
         private readonly ISet<Item> _items = new HashSet<Item>();
 
         public string Name { get; private set; }
@@ -37,6 +38,13 @@ namespace CuboCore.Domain {
 
         public void RemoveItem(string key) {
             _items.Remove(GetItem(key));
+        }
+
+        public override string ToString() {
+            return $"{base.ToString()}, " +
+                   $"{nameof(Name)}: {Name}, " +
+                   $"{nameof(CreatedAt)}: {CreatedAt}, " +
+                   $"{nameof(Items)}: {Items}";
         }
 
     }
