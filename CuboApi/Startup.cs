@@ -1,3 +1,8 @@
+using AutoMapper;
+using CuboCore.Mappers;
+using CuboCore.Repositories.Buckets;
+using CuboCore.Services.Buckets;
+using CuboCore.Services.Items;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +23,10 @@ namespace CuboApi {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
+            services.AddScoped<IBucketRepository, InMemoryBucketRepository>();
+            services.AddScoped<IBucketService, BucketService>();
+            services.AddScoped<IItemService, ItemService>();
+            services.AddSingleton<IMapper>(_ => AutoMapperConfig.InitializeMapper());
             services.AddControllers();
         }
 
