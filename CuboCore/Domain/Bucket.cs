@@ -8,7 +8,6 @@ namespace CuboCore.Domain {
     public class Bucket : BaseEntity {
 
         /*------------------------ FIELDS REGION ------------------------*/
-        // TODO Check if _items and Items work as expected
         private readonly ISet<Item> _items = new HashSet<Item>();
 
         public string Name { get; private set; }
@@ -16,6 +15,11 @@ namespace CuboCore.Domain {
 
         /*------------------------ METHODS REGION ------------------------*/
         protected Bucket() {
+        }
+
+        public Bucket(string name) {
+            Name = name;
+            CreatedAt = DateTime.Now;
         }
 
         public Item GetItem(string key) {
