@@ -11,7 +11,7 @@
         }
 
         public Item(string key, string value) {
-            Key = key.ToLowerInvariant();
+            Key = key;
             Value = value;
         }
 
