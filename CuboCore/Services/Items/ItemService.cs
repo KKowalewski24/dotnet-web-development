@@ -22,8 +22,7 @@ namespace CuboCore.Services.Items {
         public async Task<ItemDTO> GetAsync(string bucketName, string key) {
             Bucket bucket = await _bucketRepository.GetOrFailAsync(bucketName);
             Item item = bucket.GetItem(key);
-            //TODO
-            return new ItemDTO();
+            return new ItemDTO(item.Key, item.Value);
         }
 
         public async Task<IEnumerable<string>> GetKeysAsync(string bucketName) {
