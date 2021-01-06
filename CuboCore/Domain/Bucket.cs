@@ -26,7 +26,7 @@ namespace CuboCore.Domain {
         }
 
         public Item GetItem(string key) {
-            Item item = _items.SingleOrDefault((it) => it.Key == key);
+            Item item = Items.SingleOrDefault((it) => it.Key == key);
             if (item == null) {
                 throw new ItemNotFoundException($"Item: {key}, Bucket: {Name}");
             }
@@ -35,7 +35,7 @@ namespace CuboCore.Domain {
         }
 
         public void AddItem(string key, string value) {
-            if (_items.Any((it) => it.Key == key)) {
+            if (Items.Any((it) => it.Key == key)) {
                 throw new ItemAlreadyExistsException($"Item: {key}, Bucket: {Name}");
             }
 
@@ -81,7 +81,7 @@ namespace CuboCore.Domain {
             return $"{base.ToString()}, " +
                    $"{nameof(Name)}: {Name}, " +
                    $"{nameof(CreatedAt)}: {CreatedAt}, " +
-                   $"{nameof(_items)}: {_items}";
+                   $"{nameof(Items)}: {Items}";
         }
 
     }
