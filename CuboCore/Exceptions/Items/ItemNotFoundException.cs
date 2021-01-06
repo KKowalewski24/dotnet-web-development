@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace CuboCore.Exceptions.Item {
+namespace CuboCore.Exceptions.Items {
 
     public class ItemNotFoundException : NotFoundException {
 

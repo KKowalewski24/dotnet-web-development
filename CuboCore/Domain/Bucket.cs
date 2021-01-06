@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using CuboCore.Exceptions.Item;
+using CuboCore.Exceptions.Items;
 
 namespace CuboCore.Domain {
 
