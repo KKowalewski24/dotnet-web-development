@@ -13,6 +13,9 @@ namespace CuboCore.Domain {
         public string Name { get; private set; }
         public DateTime CreatedAt { get; private set; }
 
+        // TODO FIX THIS FOR REAL READONLY
+        public IEnumerable<Item> Items => _items;
+
         /*------------------------ METHODS REGION ------------------------*/
         protected Bucket() {
         }
