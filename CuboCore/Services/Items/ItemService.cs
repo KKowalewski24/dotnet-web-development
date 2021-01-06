@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CuboCore.Domain;
 using CuboCore.DTO;
 using CuboCore.Repositories;
@@ -13,16 +14,18 @@ namespace CuboCore.Services.Items {
 
         /*------------------------ FIELDS REGION ------------------------*/
         private readonly IBucketRepository _bucketRepository;
+        private readonly IMapper _mapper;
 
         /*------------------------ METHODS REGION ------------------------*/
-        public ItemService(IBucketRepository bucketRepository) {
+        public ItemService(IBucketRepository bucketRepository, IMapper mapper) {
             _bucketRepository = bucketRepository;
+            _mapper = mapper;
         }
 
         public async Task<ItemDTO> GetAsync(string bucketName, string key) {
             Bucket bucket = await _bucketRepository.GetOrFailAsync(bucketName);
             Item item = bucket.GetItem(key);
-            return new ItemDTO(item.Key, item.Value);
+            return _mapper.Map<ItemDTO>(item);
         }
 
         public async Task<IEnumerable<string>> GetKeysAsync(string bucketName) {
