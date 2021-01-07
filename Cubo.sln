@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboApi", "CuboApi\CuboApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboCore", "CuboCore\CuboCore.csproj", "{9248C46A-53EE-4FF1-81BC-6A1DA290CD4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboTests", "CuboTests\CuboTests.csproj", "{BD6A3925-4A58-454F-BCEC-D1359E79B7F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboCoreTests", "CuboCoreTests\CuboCoreTests.csproj", "{BD6A3925-4A58-454F-BCEC-D1359E79B7F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

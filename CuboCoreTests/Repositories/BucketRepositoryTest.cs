@@ -3,7 +3,7 @@ using CuboCore.Domain;
 using CuboCore.Repositories.Buckets;
 using Xunit;
 
-namespace CuboTests.Repositories {
+namespace CuboCoreTests.Repositories {
 
     public class BucketRepositoryTest {
 

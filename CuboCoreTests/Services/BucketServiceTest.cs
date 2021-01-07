@@ -8,7 +8,7 @@ using CuboCore.Services.Buckets;
 using Moq;
 using Xunit;
 
-namespace CuboTests.Services {
+namespace CuboCoreTests.Services {
 
     public class BucketServiceTest {
 
