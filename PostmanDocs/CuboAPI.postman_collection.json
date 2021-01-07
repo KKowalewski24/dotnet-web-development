@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "09ed5937-1b90-43fd-8cea-c3e592d53df1",
+		"name": "CuboAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetBuckets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "bucket",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 10:57:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "PostBucket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						"FirstBucket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "bucket",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								"FirstBucket"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 10:58:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Location",
+							"value": "buckets/FirstBucket"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GetBucketByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						"FirstBucket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Selected bucket",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								"FirstBucket"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 11:04:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"FirstBucket\",\n    \"createdAt\": \"2021-01-07T12:04:36.4761646+01:00\",\n    \"items\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "GetItemsByKeyInBucketByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/item/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						"FirstBucket",
+						"item",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Seletect bucket Items",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/items",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								"FirstBucket",
+								"items"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 11:05:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "PostItemByBucketName",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"key\": \"item1\", \"value\": \"item1 value\"}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/item",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						"FirstBucket",
+						"item"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Selected bucket items",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"key\": \"item1 key\", \"value\": \"item1 value\"}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/items",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								"FirstBucket",
+								"items"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 11:14:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Location",
+							"value": "bucket/{bucketName}/items/item1 key"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GetItemByKeyInBucketByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/item/item1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						"FirstBucket",
+						"item",
+						"item1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Selected bucket selected item",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/items/item1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								"FirstBucket",
+								"items",
+								"item1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 11:21:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"key\": \"item1\",\n    \"value\": \"\\\"item1 value\\\"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteItemByKeyInBucketByName",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/item/item1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						"FirstBucket",
+						"item",
+						"item1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Selected bucket selected item",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket/items/item1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								"FirstBucket",
+								"items",
+								"item1"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 11:22:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "DeleteBucketByName",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"{{apiPrefix}}",
+						"bucket",
+						"FirstBucket"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Selected bucket",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{apiPrefix}}/bucket/FirstBucket",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{apiPrefix}}",
+								"bucket",
+								"FirstBucket"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jan 2021 11:24:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
