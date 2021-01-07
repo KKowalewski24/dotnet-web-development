@@ -42,7 +42,7 @@ namespace CuboApi.Controllers {
             await _itemService.AddAsync(bucketName, itemDto.Key, itemDto.Value);
 
             return Created(
-                BUCKET + SLASH + PARAM_BUCKET_NAME + SLASH + ITEMS + SLASH + itemDto.Key,
+                BUCKET + SLASH + PARAM_BUCKET_NAME + SLASH + ITEM + SLASH + itemDto.Key,
                 null
             );
         }
