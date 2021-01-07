@@ -1,4 +1,6 @@
-# dotnet-web-development
+# .NET Web Development
+
+### Project has been created based on *Full Stack .NET Web Development* by Piotr Gankiewicz
 
 ### Code Style Rules and Formatter
 Formatter for this project: [dotnet-format](https://github.com/dotnet/format)
