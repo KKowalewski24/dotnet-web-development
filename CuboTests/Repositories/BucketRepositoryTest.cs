@@ -11,9 +11,9 @@ namespace CuboTests.Repositories {
 
         /*------------------------ METHODS REGION ------------------------*/
         [Fact]
-        public async Task CreateNewBucket() {
-            IBucketRepository bucketRepository = new InMemoryBucketRepository();
+        public async Task AddAsync_CreateNewBucket() {
             const string bucketName = "First";
+            IBucketRepository bucketRepository = new InMemoryBucketRepository();
             Bucket bucket = new Bucket(bucketName);
 
             await bucketRepository.AddAsync(bucket);
