@@ -12,12 +12,12 @@
         public const string PARAM_NAME = "{name}";
 
         /*Item Controller*/
-        public const string BUCKETS = "buckets";
+        public const string BUCKET = "bucket";
         public const string ITEMS = "items";
         public const string PARAM_BUCKET_NAME = "{bucketName}";
         public const string PARAM_KEY = "{key}";
         public const string BASE_PATH_ITEM_CONTROLLER =
-            API + SLASH + BUCKETS + SLASH + PARAM_BUCKET_NAME + SLASH + ITEMS;
+            API + SLASH + BUCKET + SLASH + PARAM_BUCKET_NAME + SLASH + ITEMS;
 
     }
 
