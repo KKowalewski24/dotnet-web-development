@@ -23,7 +23,7 @@ namespace CuboApi {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
-            services.AddScoped<IBucketRepository, InMemoryBucketRepository>();
+            services.AddSingleton<IBucketRepository, InMemoryBucketRepository>();
             services.AddScoped<IBucketService, BucketService>();
             services.AddScoped<IItemService, ItemService>();
             services.AddSingleton<IMapper>(_ => AutoMapperConfig.InitializeMapper());
