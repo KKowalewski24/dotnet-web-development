@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboCore", "CuboCore\CuboCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboCoreTests", "CuboCoreTests\CuboCoreTests.csproj", "{BD6A3925-4A58-454F-BCEC-D1359E79B7F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuboApiTests", "CuboApiTests\CuboApiTests.csproj", "{1724B6B2-01E1-4E23-AAF2-156BA12B407C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{BD6A3925-4A58-454F-BCEC-D1359E79B7F0}.Release|x64.Build.0 = Release|Any CPU
 		{BD6A3925-4A58-454F-BCEC-D1359E79B7F0}.Release|x86.ActiveCfg = Release|Any CPU
 		{BD6A3925-4A58-454F-BCEC-D1359E79B7F0}.Release|x86.Build.0 = Release|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Debug|x64.Build.0 = Debug|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Debug|x86.Build.0 = Debug|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Release|x64.ActiveCfg = Release|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Release|x64.Build.0 = Release|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Release|x86.ActiveCfg = Release|Any CPU
+		{1724B6B2-01E1-4E23-AAF2-156BA12B407C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
