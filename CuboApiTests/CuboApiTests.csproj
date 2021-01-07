@@ -16,6 +16,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\CuboApi\CuboApi.csproj"/>
+        <ProjectReference Include="..\CuboCore\CuboCore.csproj"/>
     </ItemGroup>
 
 </Project>
