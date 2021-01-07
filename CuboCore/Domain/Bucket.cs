@@ -13,7 +13,6 @@ namespace CuboCore.Domain {
         public string Name { get; private set; }
         public DateTime CreatedAt { get; private set; }
 
-        // TODO FIX THIS FOR REAL READONLY
         public IEnumerable<Item> Items => _items;
 
         /*------------------------ METHODS REGION ------------------------*/
@@ -26,7 +25,7 @@ namespace CuboCore.Domain {
         }
 
         public Item GetItem(string key) {
-            Item item = Items.SingleOrDefault((it) => it.Key == key);
+            Item item = _items.SingleOrDefault((it) => it.Key == key);
             if (item == null) {
                 throw new ItemNotFoundException($"Item: {key}, Bucket: {Name}");
             }
@@ -35,7 +34,7 @@ namespace CuboCore.Domain {
         }
 
         public void AddItem(string key, string value) {
-            if (Items.Any((it) => it.Key == key)) {
+            if (_items.Any((it) => it.Key == key)) {
                 throw new ItemAlreadyExistsException($"Item: {key}, Bucket: {Name}");
             }
 
