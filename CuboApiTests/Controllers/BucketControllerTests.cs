@@ -53,7 +53,7 @@ namespace CuboApiTests.Controllers {
             );
 
             response.EnsureSuccessStatusCode();
-            Assert.Equal(response.StatusCode, HttpStatusCode.Created);
+            Assert.Equal(HttpStatusCode.Created, response.StatusCode);
             Assert.Equal(
                 response.Headers.Location.ToString(),
                 Constants.BUCKET + "s" + PATH_PARAM_BUCKET_NAME
