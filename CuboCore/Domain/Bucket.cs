@@ -37,7 +37,7 @@ namespace CuboCore.Domain {
                 throw new ItemAlreadyExistsException($"Item: {key}, Bucket: {Name}");
             }
 
-            _items.Add(new Item(key, value));
+            _items.Add(new Item(key, value, Id));
         }
 
         public void RemoveItem(string key) {

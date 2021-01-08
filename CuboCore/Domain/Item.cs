@@ -1,18 +1,22 @@
-﻿namespace CuboCore.Domain {
+﻿using System;
+
+namespace CuboCore.Domain {
 
     public class Item : BaseEntity {
 
         /*------------------------ FIELDS REGION ------------------------*/
         public string Key { get; private set; }
         public string Value { get; private set; }
+        public Guid BucketId { get; private set; }
 
         /*------------------------ METHODS REGION ------------------------*/
         protected Item() {
         }
 
-        public Item(string key, string value) {
+        public Item(string key, string value, Guid bucketId) {
             Key = key;
             Value = value;
+            BucketId = bucketId;
         }
 
         protected bool Equals(Item other) {
