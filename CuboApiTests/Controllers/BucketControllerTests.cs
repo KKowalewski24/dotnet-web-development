@@ -42,7 +42,7 @@ namespace CuboApiTests.Controllers {
             IEnumerable<string> buckets =
                 JsonConvert.DeserializeObject<IEnumerable<string>>(content);
 
-            Assert.Empty(buckets);
+            Assert.NotEmpty(buckets);
         }
 
         [Fact]
