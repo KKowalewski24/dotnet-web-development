@@ -12,5 +12,6 @@ csharp_new_line_before_members_in_anonymous_types = false
 csharp_new_line_before_members_in_object_initializers = false
 csharp_new_line_before_open_brace = none
 csharp_new_line_between_query_expression_clauses = true
+csharp_indent_case_contents_when_block = false
 
 dotnet_sort_system_directives_first = true

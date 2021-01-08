@@ -27,23 +27,21 @@ namespace CuboApi.Middleware {
         }
 
         private static Task HandleErrorAsync(HttpContext httpContext, Exception exception) {
-            Type exceptionType = exception.GetType();
             HttpStatusCode statusCode = HttpStatusCode.InternalServerError;
-            /*TODO check if comparing exception type works ok*/
+
             switch (exception) {
-                case NotFoundException e when exceptionType == typeof(NotFoundException): {
-                        statusCode = HttpStatusCode.BadRequest;
-                        break;
-                    }
-                case AlreadyExistsException e
-                    when exceptionType == typeof(AlreadyExistsException): {
-                        statusCode = HttpStatusCode.BadRequest;
-                        break;
-                    }
-                case ArgumentException e when exceptionType == typeof(ArgumentException): {
-                        statusCode = HttpStatusCode.NotAcceptable;
-                        break;
-                    }
+                case NotFoundException e: {
+                    statusCode = HttpStatusCode.BadRequest;
+                    break;
+                }
+                case AlreadyExistsException e: {
+                    statusCode = HttpStatusCode.BadRequest;
+                    break;
+                }
+                case ArgumentException e: {
+                    statusCode = HttpStatusCode.NotAcceptable;
+                    break;
+                }
             }
 
             httpContext.Response.ContentType = MediaTypeNames.Application.Json;
